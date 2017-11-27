@@ -37,7 +37,7 @@ Value | Spectrum | Description
 `'blue'` | | TODO +3dB/octave.
 `'violet'` | | TODO +6dB/octave.
 `'grey'` | | TODO White noise weighted by loudness curve, see [a-weighting](https://github.com/audiojs/a-weighting). Also see [wiki](https://en.wikipedia.org/wiki/Grey_noise)
-`'green'`` | | TODO
+`'green'` | | TODO
 
 ### `noise(target|length?)`
 
