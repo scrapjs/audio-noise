@@ -2,6 +2,7 @@
 
 'use strict'
 
+// const wf = require('gl-waveform')()
 const write = require('web-audio-write')()
 const noise = require('./')({color: 'white', format: 'stereo audiobuffer'})
 
