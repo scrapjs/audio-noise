@@ -1,4 +1,4 @@
-# audio-noise [![Build Status](https://travis-ci.org/audiojs/audio-noise.svg?branch=master)](https://travis-ci.org/audiojs/audio-noise) [![experimental](https://img.shields.io/badge/stability-unstable-green.svg)](http://github.com/badges/stability-badges)
+# audio-noise [![Build Status](https://travis-ci.org/audiojs/audio-noise.svg?branch=master)](https://travis-ci.org/audiojs/audio-noise) [![experimental](https://img.shields.io/badge/stability-experimental-orange.svg)](http://github.com/badges/stability-badges)
 
 Fill array or audio-buffer with defined type of noise.
 
@@ -13,32 +13,31 @@ let noise = createNoise('pink')
 let arr = noise(Array(1024))
 ```
 
-### `createNoise(color|options)`
+### `createNoise(color|options?)`
 
-Create noise generator based off color of noise or options.
+Create noise generator of specific color or based on `options`.
 
 #### `options`
 
 Property | Default | Meaning
 ---|---|---
 `type`, `color` | `'white'` | Color of noise.
-`sampleRate`, `rate` | `44100` | Output data sample rate.
-`channels`, `numberOfChannels` | `1` | Output data number of channels.
-`length`, `frameSize`, `samplesPerFrame` | `1024` | Default length of the block.
-`format`, `dtype` | `'float32'` | Output data format, eg. `'uint8 interleaved'`, `'float32 planar'`, `'array'`, `'audiobuffer'` etc. See [pcm-convert](https://github.com/audiojs/pcm-convert) and [audio-format](https://github.com/audiojs/audio-format) for list of available formats.
-`alias` | `{}` | Dict of param aliases to read from options, eg. `{frequency: 'freq f frequency'}`
+`sampleRate` | `44100` | Output data sample rate.
+`channels` | `1` | Output data number of channels.
+`samplesPerFrame` | `1024` | Default length of the block.
+`format` | `'float32'` | Output data format, eg. `'uint8 interleaved'`, `'float32 planar'`, `'array'`, `'audiobuffer'` etc. See [pcm-convert](https://github.com/audiojs/pcm-convert) and [audio-format](https://github.com/audiojs/audio-format) for list of available formats.
 
 #### `color` or `options.color`
 
 Value | Spectrum | Description
 ---|---|---
-'white' | | Flat spectrum noise. See [wiki](https://en.wikipedia.org/wiki/White_noise).
-'pink' | | -3dB/octave. See [wiki](https://en.wikipedia.org/wiki/Pink_noise).
-'brown' | | -6dB/octave. See [wiki](https://en.wikipedia.org/wiki/Brownian_noise).
-'blue' | | +3dB/octave.
-'violet' | | +6dB/octave.
-'grey' | | White noise weighted by loudness curve, see [a-weighting](https://github.com/audiojs/a-weighting). Also see [wiki](https://en.wikipedia.org/wiki/Grey_noise)
-'green'` | |
+`'white'` | | Flat spectrum noise. See [wiki](https://en.wikipedia.org/wiki/White_noise).
+`'pink'` | | -3dB/octave. See [wiki](https://en.wikipedia.org/wiki/Pink_noise).
+`'brown'` | | -6dB/octave. See [wiki](https://en.wikipedia.org/wiki/Brownian_noise).
+`'blue'` | | TODO +3dB/octave.
+`'violet'` | | TODO +6dB/octave.
+`'grey'` | | TODO White noise weighted by loudness curve, see [a-weighting](https://github.com/audiojs/a-weighting). Also see [wiki](https://en.wikipedia.org/wiki/Grey_noise)
+`'green'`` | | TODO
 
 ### `noise(target|length?)`
 
@@ -67,4 +66,4 @@ const noise = require('./')({color: 'white', format: 'stereo audiobuffer'})
 
 ## License
 
-(c) 2017 Dmitry Yvanov. MIT License
+© 2017 Dmitry Yvanov @ audiojs. MIT License
