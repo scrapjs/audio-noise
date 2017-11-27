@@ -1,4 +1,4 @@
-# audio-noise [![Build Status](https://travis-ci.org/audiojs/audio-noise.svg?branch=master)](https://travis-ci.org/audiojs/audio-noise) [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
+# audio-noise [![Build Status](https://travis-ci.org/audiojs/audio-noise.svg?branch=master)](https://travis-ci.org/audiojs/audio-noise) [![experimental](https://img.shields.io/badge/stability-unstable-green.svg)](http://github.com/badges/stability-badges)
 
 Fill array or audio-buffer with defined type of noise.
 
